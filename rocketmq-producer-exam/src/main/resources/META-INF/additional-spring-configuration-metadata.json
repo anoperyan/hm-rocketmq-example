@@ -1,0 +1,13 @@
+{
+  "properties": [
+    {
+      "name": "rocketmq-client.producer.name-serv-addr",
+      "type": "java.lang.String",
+      "description": "Description for rocketmq-client.producer.name-serv-addr."
+    },
+    {
+      "name": "rocketmq-client.producer.group-name",
+      "type": "java.lang.String",
+      "description": "Description for rocketmq-client.producer.group-name."
+    }
+  ] }

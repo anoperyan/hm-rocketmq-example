@@ -1,0 +1,10 @@
+server:
+  port: 9040
+
+spring:
+  profiles:
+    active: dev
+  liquibase:
+    enabled: false
+  application:
+    name: producer-service

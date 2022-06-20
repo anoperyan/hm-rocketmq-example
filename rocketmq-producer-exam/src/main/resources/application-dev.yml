@@ -1,0 +1,55 @@
+spring:
+  liquibase:
+    enabled: false
+  application:
+      name: yinya-service-test
+  datasource:
+    url: jdbc:mysql://106.55.155.77:3306/miaoyin_single_test?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: Yjxwbi0815#)!
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    druid:
+      initial-size: 5 #连接池初始化大小9004
+      min-idle: 1 #最小空闲连接数
+      max-active: 5 #最大连接数
+      max-wait: 2000 # 获取连接等待超时的时间
+  thymeleaf:
+    cache: false
+    mode: HTML5
+    suffix: .html
+    prefix: 'file:templates/'
+  http:
+    encoding:
+      force: true
+      charset: UTF-8
+  mvc:
+    throw-exception-if-no-handler-found: true  #  出现错误时, 直接抛出异常
+  # 默认的时间格式
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  redis:
+    database: 0
+    host: 106.55.155.77
+    port: 6379
+    password: Yjx!df_#XX123
+    jedis:
+      pool:
+        max-active: 10
+        max-idle: 2
+        min-idle: 1
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 20MB
+
+logging:
+  level:
+    org.springframework.*: debug
+    com.hm.yinya.*: debug
+    org.ibatis.*: debug
+
+rocketmq-client:
+  producer:
+    name-serv-addr: 127.0.0.1:9876
+    group-name: yjh_test
